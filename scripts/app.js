@@ -1,0 +1,1 @@
+let ingreso = document.getElementById(ingresoTexto).value;
