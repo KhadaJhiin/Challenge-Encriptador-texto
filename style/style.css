@@ -249,6 +249,9 @@ footer{
     .main__areaEncriptacion__container{
         width: 75vw;
     }
+    .main__areaEncriptacion button{
+        width: 94% ;
+    }
 }
 
 @media (max-width: 414px){
@@ -297,6 +300,9 @@ footer{
     }
     .main__areaEncriptacion__container{
         width: 75vw;
+    }
+    .main__areaEncriptacion button{
+        width: 90% ;
     }
     footer{
         padding-left: 2.77vw;
