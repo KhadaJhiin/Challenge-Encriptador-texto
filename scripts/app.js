@@ -1,6 +1,15 @@
 function encriptarTexto(){
     let textoUsuario = document.getElementById('ingresoTexto').value;
     let textoEncriptado = "";
+    if (!textoUsuario) {
+        alert('Por favor ingrese algún texto.');
+        return "";
+    }
+    let regex = /[A-Z]|[^a-z0-9\s]/;
+    if (regex.test(textoUsuario)) {
+        alert('El texto no debe contener letras mayúsculas ni caracteres especiales.');
+        return "";
+    }
 
     for(let i=0; i<textoUsuario.length; i++){
         switch(textoUsuario[i]){
@@ -37,7 +46,12 @@ function insertarTexto(elemento, texto){
 
 function actualizarContenido(){
     let nuevoTexto = encriptarTexto();
-    insertarTexto('.main__areaEncriptacion',`<p>${nuevoTexto}</p>`);
+
+    if (nuevoTexto != ""){
+        insertarTexto('.main__areaEncriptacion',`<p>${nuevoTexto}</p> <button>Copiar</button>`);
+        let areaEncriptacion = document.getElementById('encriptacionAreaId');
+        areaEncriptacion.classList.add('main__areaEncriptacion__textoEncriptado');
+    }
 }
 
 
