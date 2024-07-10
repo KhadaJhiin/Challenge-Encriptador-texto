@@ -18,7 +18,7 @@
     
             <!--Entrad de texto-->
             <div class="main__container__input">
-                <textarea name="ingresoTexto" id="ingresoTexto">Ingrese el texto aqui</textarea>
+                <textarea onclick="clicTexArea();" name="ingresoTexto" id="ingresoTexto" placeholder="Ingrese el texto aqui"></textarea>
             </div>
     
     
@@ -30,8 +30,8 @@
     
             <!--Botones-->
             <div class="main__botones">
-                <button class="main__botones__encriptar">Encriptar</button>
-                <button class="main__botones__desencriptar">Desencriptar</button>
+                <button onclick="actualizarContenido();" class="main__botones__encriptar">Encriptar</button>
+                <button onclick="" class="main__botones__desencriptar">Desencriptar</button>
             </div>
         </div>
 
@@ -43,7 +43,7 @@
             <div class="main__areaEncriptacion__container">
                 <p><strong>Ningún mensaje fue encontrado</strong><br><br>
                     Ingresa el texto que desees encriptar o desencriptar
-                    </p>
+                </p>
             </div>
         </div>
 
@@ -63,5 +63,6 @@
             </a>
         </div>
     </footer>
+    <Script src="/scripts/app.js"></Script>
 </body>
 </html>

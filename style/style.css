@@ -53,6 +53,12 @@ main{
     height: 100%;
 }
 
+.main__container__input textarea::placeholder{
+    font-family:"Inter", sans-serif;
+    color: #0A3871;
+    font-size: 2rem;
+}
+
 .main__container__input textarea:focus{
     border-color:#0A3871;
     box-shadow: 0 0 10px rgba(8, 146, 226, 0.7); 
@@ -115,7 +121,7 @@ main{
     justify-content: center;
     background-color: #FFFFFF;
     width: 27.7vw;
-    height: 87.9vh;
+    min-height: 87.9vh;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     overflow: auto;
@@ -197,7 +203,8 @@ footer{
         margin-left: 0;
         margin-right: 0;
         width: 90vw;
-        height: 12vh;
+        min-height: 12vh;
+        max-height: 60vh;
         overflow: auto;
     }
     .main__areaEncriptacion img{
@@ -246,7 +253,8 @@ footer{
         margin-left: 0;
         margin-right: 0;
         width: 88vw;
-        height: 22vh;
+        min-height: 22vh;
+        max-height: 40vh;
     }
     .main__areaEncriptacion img{
         display: none;
