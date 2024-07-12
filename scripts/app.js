@@ -1,88 +1,59 @@
-function encriptarTexto(){
+//########################################
+//### Funcion global para encriptacion ###
+function encriptacion(accion){
     let textoUsuario = document.getElementById('ingresoTexto').value;
-    let textoEncriptado = "";
-    if (!textoUsuario) {
-        alert('Por favor ingrese algún texto.');
+    if (!textoUsuario || /[A-Z]|[^a-z0-9\s]/.test(textoUsuario)) {
+        enviarAlertaError();
+        cerrarAlertaError();
         return "";
     }
-    let regex = /[A-Z]|[^a-z0-9\s]/;
-    if (regex.test(textoUsuario)) {
-        alert('El texto no debe contener letras mayúsculas ni caracteres especiales.');
-        return "";
-    }
-
-    for(let i=0; i<textoUsuario.length; i++){
-        switch(textoUsuario[i]){
-            case 'a':
-                textoEncriptado += 'ai';
-                break;
-            case 'e':
-                textoEncriptado += 'enter';
-                break;
-            case 'i':
-                textoEncriptado += 'imes';
-                break;
-            case 'o':
-                textoEncriptado += 'ober';
-                break;
-            case 'u':
-                textoEncriptado += 'ufat';
-                break;
-            default:
-                textoEncriptado += textoUsuario[i];
-                break;
-        }
-    }
-    document.getElementById('ingresoTexto').value = '';
-    return textoEncriptado;
-}
-
-function desEncriptarTexto(){
-    let textoUsuario = document.getElementById('ingresoTexto').value;
-    if (!textoUsuario) {
-        alert('Por favor ingrese algún texto.');
-        return "";
-    }
-    let regex = /[A-Z]|[^a-z0-9\s]/;
-    if (regex.test(textoUsuario)) {
-        alert('El texto no debe contener letras mayúsculas ni caracteres especiales.');
-        return "";
-    }
-    textoUsuario = textoUsuario.replace(/ai/g, "a");
-    textoUsuario = textoUsuario.replace(/enter/g, "e");
-    textoUsuario = textoUsuario.replace(/imes/g, "i");
-    textoUsuario = textoUsuario.replace(/ober/g, "o");
-    textoUsuario = textoUsuario.replace(/ufat/g, "u");
-
-    // Mostrar el texto modificado en otra text area
+    if(accion == "encriptar"){
+        textoUsuario = textoUsuario.replace(/a|e|i|o|u/g, function(match) {
+            switch(match) {
+                case 'a': return 'ai';
+                case 'e': return 'enter';
+                case 'i': return 'imes';
+                case 'o': return 'ober';
+                case 'u': return 'ufat';
+            }
+        });
+    } else if(accion == "desencriptar"){
+        textoUsuario = textoUsuario.replace(/ai|enter|imes|ober|ufat/g, function(match) {
+            switch(match) {
+                case 'ai': return 'a';
+                case 'enter': return 'e';
+                case 'imes': return 'i';
+                case 'ober': return 'o';
+                case 'ufat': return 'u';
+            }
+        });
+    }    
     document.getElementById('ingresoTexto').value = '';
     return textoUsuario;
 }
-
-
+//########################################
+//##### Funcion para insertar texto ######
 function insertarTexto(elemento, texto){
     let elementoHtml = document.querySelector(elemento,texto);
     elementoHtml.innerHTML = texto;
     return;
 }
-
-function actualizarContenidoEncriptar(){
-    let nuevoTexto = encriptarTexto();
-
-    if (nuevoTexto != ""){
-        insertarTexto('.main__areaEncriptacion',`<p>${nuevoTexto}</p> <button>Copiar</button>`);
-        let areaEncriptacion = document.getElementById('encriptacionAreaId');
-        areaEncriptacion.classList.add('main__areaEncriptacion__textoEncriptado');
-    }
+//########################################
+//### Funciones para mostrar contenido ###
+function actualizarContenido(accion){
+    let nuevoTexto = encriptacion(accion);
+    insertarTexto('.main__areaEncriptacion',`<p>${nuevoTexto}</p> <button>Copiar</button>`);
+    let areaEncriptacion = document.getElementById('encriptacionAreaId');
+    areaEncriptacion.classList.add('main__areaEncriptacion__textoEncriptado');
 }
-
-function actualizarContenidoDesencriptar(){
-    let nuevoTexto = desEncriptarTexto();
-
-    if (nuevoTexto != ""){
-        insertarTexto('.main__areaEncriptacion',`<p>${nuevoTexto}</p> <button>Copiar</button>`);
-        let areaEncriptacion = document.getElementById('encriptacionAreaId');
-        areaEncriptacion.classList.add('main__areaEncriptacion__textoEncriptado');
-    }
+//########################################
+//### Funciones para mostrar alertas #####
+function enviarAlertaError(){
+    document.getElementById("alertaError").style.display="flex";
+}
+function cerrarAlertaError(){
+    document.getElementById("ok-button").addEventListener("click",function(){
+        document.getElementById("alertaError").style.display="none";
+    });
 }
 

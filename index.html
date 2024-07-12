@@ -30,8 +30,8 @@
     
             <!--Botones-->
             <div class="main__botones">
-                <button onclick="actualizarContenidoEncriptar();" class="main__botones__encriptar">Encriptar</button>
-                <button onclick="actualizarContenidoDesencriptar();" class="main__botones__desencriptar">Desencriptar</button>
+                <button onclick="actualizarContenido('encriptar');" class="main__botones__encriptar">Encriptar</button>
+                <button onclick="actualizarContenido('desencriptar');" class="main__botones__desencriptar">Desencriptar</button>
             </div>
         </div>
 
@@ -44,6 +44,14 @@
                 <p><strong>Ningún mensaje fue encontrado</strong><br><br>
                     Ingresa el texto que desees encriptar o desencriptar
                 </p>
+            </div>
+        </div>
+
+        <!--Alerta de error-->
+        <div id="alertaError" class="main__alertaError">
+            <div class="main__alertaError__container">
+                <p>El texto no debe contener letras mayúsculas,caracteres especiales y no debe estar vacio</p>
+                <button id="ok-button">Volver</button>
             </div>
         </div>
 
