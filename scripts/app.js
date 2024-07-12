@@ -42,9 +42,10 @@ function insertarTexto(elemento, texto){
 //### Funciones para mostrar contenido ###
 function actualizarContenido(accion){
     let nuevoTexto = encriptacion(accion);
-    insertarTexto('.main__areaEncriptacion',`<p>${nuevoTexto}</p> <button>Copiar</button>`);
+    insertarTexto('.main__areaEncriptacion',`<p id="textoEncriptacion">${nuevoTexto}</p> <button id="botonCopiar">Copiar</button>`);
     let areaEncriptacion = document.getElementById('encriptacionAreaId');
     areaEncriptacion.classList.add('main__areaEncriptacion__textoEncriptado');
+    copiarTexto();
 }
 //########################################
 //### Funciones para mostrar alertas #####
@@ -56,4 +57,23 @@ function cerrarAlertaError(){
         document.getElementById("alertaError").style.display="none";
     });
 }
-
+//########################################
+//### Funcion para el boton copiar #######
+function copiarTexto() {
+    document.getElementById('botonCopiar').addEventListener('click', function() {
+        var textElement = document.getElementById('textoEncriptacion');
+        var text = textElement.innerText;
+        var textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        textarea.setSelectionRange(0, 99999);
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        var range = document.createRange();
+        range.selectNodeContents(textElement);
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+    });
+}

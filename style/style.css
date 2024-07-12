@@ -171,6 +171,9 @@ main{
     color: #495057;
     font-size: 1.5rem;
     font-family:"Inter", sans-serif;
+    word-break: normal;
+    overflow-wrap:break-word;
+    hyphens: auto;
     white-space: normal;
 }
 
