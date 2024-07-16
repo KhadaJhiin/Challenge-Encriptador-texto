@@ -7,3 +7,5 @@
   <img src="https://img.shields.io/github/stars/KhadaJhiin?style=social">
   <img src="https://img.shields.io/badge/Version-1.0-blue" alt="Version 1.0">
 </p>
+
+------------------
