@@ -9,7 +9,7 @@
 </p>
 
 ------------------
-<p>Proyecto WEB, realizado con html, css, y javaScript. En el cual se desarrolla una aplicacion para encriptar y 
+<p>Proyecto WEB realizado con html, css, y javaScript. En el cual se desarrolla una aplicacion para encriptar y 
   desencriptar texto. 
 </p><br>
 
@@ -26,4 +26,13 @@
     <img src="https://github.com/user-attachments/assets/bae99681-30c7-4c20-86fe-6fe0bf267d1a" alt="AccesoApp" width="200">
   </a>
 </p>
+
+## ✔️ Tecnologías utilizadas
+* HTML <br><br>
+* CSS <br><br>
+* Java Script <br><br>
+## 👨‍💼 Autores
+* Miguel Ortega <br><br>
+## Redes sociales
+
 
