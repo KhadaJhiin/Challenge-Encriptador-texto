@@ -9,3 +9,6 @@
 </p>
 
 ------------------
+<p>Proyecto realizado con html, css, y javaScript. En el cual se desarrolla una aplicacion para encriptar y 
+  desencriptar texto. 
+</p>
