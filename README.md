@@ -31,8 +31,18 @@
 * HTML <br><br>
 * CSS <br><br>
 * Java Script <br><br>
+
 ## 👨‍💼 Autores
 * Miguel Ortega <br><br>
-## Redes sociales
+
+## :earth_americas: Contacta con migo
+<p align="left">
+	<a href="mailto:jose.miguel.ortega.g@gmail.com"><img src="https://img.icons8.com/bubbles/50/000000/gmail.png" alt="Gmail"/></a>
+	<a href="https://github.com/KhadaJhiin"><img src="https://img.icons8.com/bubbles/50/000000/github.png" alt="GitHub"/></a>
+	<a href="https://www.linkedin.com/in/jose-miguel-ortega-gaviria-648087204/"><img src="https://img.icons8.com/bubbles/50/000000/linkedin.png" alt="LinkedIn"/></a>
+	<a href="https://www.facebook.com/josemiguel.ortega.5"><img src="https://img.icons8.com/bubbles/50/000000/facebook-new.png" alt="Facebook"/></a>
+	<a href="https://www.instagram.com/joselo.ortega/"><img src="https://img.icons8.com/bubbles/50/000000/instagram.png" alt="Instagram"/></a>
+	<a href="https://www.youtube.com/channel/UCMC7N9FRA7wncNXk-Yykh-A"><img src="https://img.icons8.com/bubbles/50/000000/youtube.png" alt="Youtube"/></a>	
+</p>
 
 
