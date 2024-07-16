@@ -9,7 +9,7 @@
 </p>
 
 ------------------
-<p>Proyecto WEB realizado con html, css, y javaScript. En el cual se desarrolla una aplicacion para encriptar y 
+<p>Proyecto WEB totalmente resposive, realizado con html, css, y javaScript. En el cual se desarrolla una aplicacion para encriptar y 
   desencriptar texto. 
 </p><br>
 
